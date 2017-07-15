@@ -138,7 +138,7 @@ $.fn.simpleLightbox = function( options )
 		wrapper = $('<div>').addClass('sl-wrapper').addClass(options.className),
 		isValidLink = function( element ){
 			if(!options.fileExt) return true;
-			return $( element ).prop( 'tagName' ).toLowerCase() == 'a' && ( new RegExp( '\.(' + options.fileExt + ')$', 'i' ) ).test( $( element ).attr( options.sourceAttr ) );
+			return $( element ).prop( 'tagName' ).toLowerCase() == 'a' && ( new RegExp( '\.(' + options.fileExt + ')', 'i' ) ).test( $( element ).attr( options.sourceAttr ) );
 		},
 		setup = function(){
 			if(options.close) closeBtn.appendTo(wrapper);
